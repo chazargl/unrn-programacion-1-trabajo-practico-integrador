@@ -4,24 +4,26 @@
 while True:
     dopamina.borrar()
 ```
-
-    Alumnos: Julieta Guzmán / Juan Matías Chazarreta
-    Ingeniería en Telecomunicaciones
-    Universidad Nacional de Río Negro (UNRN)
-
-![Logo](https://jornadasgeise.unrn.edu.ar/assets/img/logo.png)
-
 >[!Note]
 >**"Un bucle infinito en Python que busca vaciar tu cerebro del veneno del scroll infinito"**<br>
-
-## Lenguajes
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ## Autores
 
 - [@julietaguzman](https://github.com/julietaguzman)
 - [@chazargl](https://github.com/chazargl)
+
+
+    Alumnos: Julieta Guzmán / Juan Matías Chazarreta
+    Ingeniería en Telecomunicaciones
+    Universidad Nacional de Río Negro (UNRN)
+
+![Logo](assets/images/images.png)
+
+## Lenguajes
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+
 
 
 ## Sobre este repositorio

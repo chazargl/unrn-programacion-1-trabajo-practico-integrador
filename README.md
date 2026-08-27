@@ -12,18 +12,19 @@ while True:
 - [@julietaguzman](https://github.com/julietaguzman)
 - [@chazargl](https://github.com/chazargl)
 
-
+```
     Alumnos: Julieta Guzmán / Juan Matías Chazarreta
     Ingeniería en Telecomunicaciones
     Universidad Nacional de Río Negro (UNRN)
+```
 
-![Logo](assets/images/images.png)
+<p align="center">
+  <img src="assets/images/images.png" alt="Logo" width="400">
+</p>
 
 ## Lenguajes
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-
 
 
 ## Sobre este repositorio

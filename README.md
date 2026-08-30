@@ -1,9 +1,12 @@
 # Programación 1 - 2026 👾
-## Grupo: 
-```
+
+## Grupo":"
+
+```python
 while True:
     dopamina.borrar()
 ```
+
 >[!Note]
 >**"Un bucle infinito en Python que busca vaciar tu cerebro del veneno del scroll infinito"**<br>
 
@@ -12,8 +15,8 @@ while True:
 - [@julietaguzman](https://github.com/julietaguzman)
 - [@chazargl](https://github.com/chazargl)
 
-```
-    Alumnos: Julieta Guzmán / Juan Matías Chazarreta
+```python
+    Alumnos: Julieta Guzmán / Juan Matias Chazarreta
     Ingeniería en Telecomunicaciones
     Universidad Nacional de Río Negro (UNRN)
 ```
@@ -25,7 +28,6 @@ while True:
 ## Lenguajes
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
 
 ## Sobre este repositorio
 

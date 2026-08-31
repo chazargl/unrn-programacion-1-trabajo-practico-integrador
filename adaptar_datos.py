@@ -1,5 +1,5 @@
 
-with open("datos/observaciones.txt", "r", encoding="latin-1") as archivo:
+with open("assets/datos/observaciones.txt", "r", encoding="latin-1") as archivo:
     for linea in archivo:
         print(linea.strip())
 

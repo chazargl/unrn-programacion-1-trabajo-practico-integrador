@@ -20,7 +20,7 @@ def parsear_linea (linea: str):
         dd = int(dd_string)
         ff = int(ff_string)
     except ValueError:
-        return None, "Contienen caracteres invalidos o faltan datos"
+        return None, "Contienen caracteres invalidos o faltan datos."
     
     if hora <= 0 or hora >= 23:
         return None, f"Hora fuera de rango (0 - 23): {hora}"
@@ -31,7 +31,7 @@ def parsear_linea (linea: str):
     if ff < 0:
         return None, f"Velocidad del viento negativa: {ff}"
     if not estacion.strip():
-        return None, "El nombre de la estacion esta vacion"
+        return None, "El nombre de la estacion esta vacio."
 
     valido = {
         "fecha": fecha_string,

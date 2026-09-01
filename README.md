@@ -1,6 +1,6 @@
 # Programación 1 - 2026 👾
 
-## Grupo":"
+## Grupo:
 
 ```python
 while True:

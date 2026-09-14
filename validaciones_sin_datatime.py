@@ -1,7 +1,5 @@
-
-# Modulo de validaciones con datetime
-
-from datetime import datetime
+ 
+# Modulo de validaciones
 
 palabras_encabezado = ["FECHA", "HORA", "TEMP", "HUM", "PNM", "DD", "FF", "NOMBRE"]
 
@@ -16,15 +14,38 @@ def encabezado_o_vacia (linea):
             return True
     return False
 
-def validar_fecha (fecha_string):
-    if len(fecha_string) != 8 or not fecha_string.isdigit():
+def validar_fecha_sin_datetime (fecha_string):
+    if len(fecha_string) != 8 or not  fecha_string.isdigit():
         return False, f"La fecha debe tener 8 digitos numericos (DDMMAAAA): {fecha_string}"
   
     try:
-        datetime.strptime(fecha_string, "%d%m%Y")
-        return True, None
+        dia = int(fecha_string[0:2]) # [inicio, fin] abarca los dos primeros digitos
+        mes = int(fecha_string[2:4])
+        año = int(fecha_string[4:8])
     except ValueError:
         return False, f"Error al procesar la fecha:{fecha_string}"
+
+    if mes < 1 or mes > 12:
+        return False, "Mes fuera de rango."
+
+    dias_del_mes = {
+        1:31,
+        2:29,
+        3:31,
+        4:30,
+        5:31,
+        6:30,
+        7:31,
+        8:31,
+        9:30,
+        10:31,
+        11:30,
+        12:31
+    }
+
+    maximo_de_dias = dias_del_mes[mes]
+    if dia < 1 or dia > maximo_de_dias:
+        return False, "Dia fuera del rango."
 
 # Parsear: Analizar una cadena de texto de una sola línea 
 # para separar sus partes y extraer datos útiles
@@ -52,7 +73,7 @@ def parsear_linea (linea):
     except ValueError:
         return None, "Contienen caracteres invalidos o faltan datos"
 
-    fecha_valida, error_fecha = validar_fecha(fecha_string)
+    fecha_valida, error_fecha = validar_fecha_sin_datetime(fecha_string)
     if not fecha_valida:
         return None, f"Error en fecha: {error_fecha}"
 
@@ -89,4 +110,3 @@ def parsear_linea (linea):
     }
 
     return registro, None
-    

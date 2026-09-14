@@ -1,18 +1,18 @@
 
 import sys
-import os
 import json
 import validaciones
 
 def procesar_txt(ruta_txt):
     registros_validos = []
     registros_invalidos = []
-
+    
     try:
         with open(ruta_txt, "r", encoding="latin-1") as archivo:
-            for numero_linea, linea in enumerate(archivo, start = 1):
+            for numero_linea, linea in enumerate(archivo, start=1):
                 if validaciones.encabezado_o_vacia(linea):
                     continue
+
                 registro, error = validaciones.parsear_linea(linea)
 
                 if registro is not None:
@@ -27,8 +27,9 @@ def procesar_txt(ruta_txt):
         print(f"No se encontro el archivo: {ruta_txt}")
         sys.exit(1)
 
-def generar_json(registros_validos, registros_invalidos, ruta_salida):
+    return registros_validos, registros_invalidos
 
+def generar_json(registros_validos, registros_invalidos, ruta_salida):
     total = len(registros_validos) + len(registros_invalidos)
     datos_json = {
         "total_de_registros": total,
@@ -38,15 +39,27 @@ def generar_json(registros_validos, registros_invalidos, ruta_salida):
         "registros_invalidos": registros_invalidos 
     }
 
+    with open(ruta_salida, "w", encoding="latin-1") as archivo_salida:
+            json.dump(datos_json, archivo_salida, indent=4, ensure_ascii=False)
+
 def main():
     if len(sys.argv) != 3:
-        print("Ingreso de datos: python adaptar_datos.py archivo_entrada.txt archivo_salida.json")
+        print("Ingreso de datos: python adaptar_datos.py observaciones.txt archivo_salida.json")
+        sys.exit(1)
 
     ruta_entrada = sys.argv[1]
     ruta_salida = sys.argv[2]
 
     registros_validos, registros_invalidos = procesar_txt(ruta_entrada)
     generar_json(registros_validos, registros_invalidos, ruta_salida)
+
+    total = len(registros_validos) + len(registros_invalidos)
+    print(f"Total de registros leidos: {total}")
+    print(f"Registros validos {len(registros_validos)}")
+    print(f"Registros invalidos {len(registros_invalidos)}")
+    print(f"Archivo generado en: {ruta_salida}")
+
+main()
 
 # El parámetro encoding="latin-1" le indica a Python qué tabla de caracteres utilizar
 # para traducir los bytes crudos del archivo de texto a letras y símbolos legibles.

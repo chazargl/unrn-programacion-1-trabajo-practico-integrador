@@ -67,3 +67,21 @@ python adaptar_datos.py observaciones.txt observaciones.json
 cd app_web
 python procesar_datos.py entradas/observaciones.json "AEROPARQUE AERO" temperatura
 ```
+
+
+```bash
+cd app_web
+python procesar_datos.py entradas/observaciones.json "AEROPARQUE AERO" humedad
+```
+
+
+```bash
+cd app_web
+python procesar_datos.py entradas/observaciones.json "AEROPARQUE AERO" presion
+```
+
+
+```bash
+cd app_web
+python procesar_datos.py entradas/observaciones.json "AEROPARQUE AERO" viento
+```

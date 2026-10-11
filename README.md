@@ -36,6 +36,7 @@ Acá se va a publica todo lo relacionado al progreso del trabajo práctico integ
 1. Conversor TXT a JSON.
 2. Análisis del JSON y app web interactiva.
 
+```
 trabajo_integrador/
 ├── conversor/                    # Parte 1
 │   ├── adaptar_datos.py
@@ -50,6 +51,7 @@ trabajo_integrador/
 │   └── salidas/
 ├── requirements.txt
 └── README.md
+```
 
 Ejecución: 
 1. Conversor TXT a JSON:

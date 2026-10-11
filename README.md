@@ -55,6 +55,7 @@ trabajo_integrador/
 
 Ejecución: 
 1. Conversor TXT a JSON:
-cd conversor python adaptar_datos.py datos/observaciones.txt datos/
-2. Procesamiento de datos:
+cd conversor
+python adaptar_datos.py observaciones.txt observaciones.json
+3. Procesamiento de datos:
 cd app_web python procesar_datos.py entradas/observaciones.json "AEROPARQUE AERO" temperatura
